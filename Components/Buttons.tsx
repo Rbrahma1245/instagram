@@ -5,15 +5,15 @@ const Buttons = () => {
   return (
     <View style={styles.buttonContainer}>
       <Image
-        style={{width: 40, height: 60}}
-        source={require('../images/heart.jpg')}
+        style={{width: 28, height: 28, marginLeft:15}}
+        source={require('../images/heart.png')}
       />
 
       <Image style={styles.image} source={require('../images/comment.png')} />
 
       <Image style={styles.image} source={require('../images/share.png')} />
       <Image
-        style={{width: 30, height: 40, marginLeft: 230}}
+        style={{width: 30, height: 40, marginLeft: 240}}
         source={require('../images/save.png')}
       />
     </View>
