@@ -15,7 +15,7 @@ const Header = () => {
             />
 
             <Image
-                style={{ width: 28, height: 28,  marginLeft: 15 }}
+                style={{ width: 26, height: 26,  marginLeft: 15 , marginTop:-2}}
                 source={require('../images/messenger.jpg')}
             />
         </View>

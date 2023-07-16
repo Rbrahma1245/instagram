@@ -41,7 +41,7 @@ const Buttons = ({list}: any) => {
 
       <Image style={styles.image} source={require('../images/share.png')} />
       <Image
-        style={{width: 30, height: 40, marginLeft: 240}}
+        style={{width: 28, height: 35, marginLeft: 240}}
         source={require('../images/save.png')}
       />
     </View>
@@ -55,8 +55,8 @@ const styles = StyleSheet.create({
     alignItems: 'center',
   },
   image: {
-    width: 28,
-    height: 28,
+    width: 25,
+    height: 25,
     marginLeft: 15,
     alignItems: 'center',
   },
