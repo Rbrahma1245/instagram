@@ -1,33 +1,39 @@
 import React from 'react';
-import {Image, StyleSheet, Text, TouchableOpacity, View} from 'react-native';
-import { List } from '../App';
+import {
+  Image,
+  ScrollView,
+  StyleSheet,
+  TouchableOpacity,
+  View,
+} from 'react-native';
+import {List} from '../App';
+import dp from '../images/dp.jpg';
+import StoriesCard from './StoriesCard';
 
 const Stories = ({list}: any) => {
   return (
-    <View style={{flexDirection: 'row', height: 70, marginTop: 10}}>
-      {list.map((e: List, i: number) => {
-        return (
-          <View style={styles.storiesCard} key={`${e.id}_${i}`}>
-            <TouchableOpacity>
-              <Image
-                style={{width: 63, height: 63, borderRadius:50}}              
-                source={e.profileImg}
-              />
-            </TouchableOpacity>
-          </View>
-        );
-      })}
-    </View>
+    <ScrollView
+      horizontal={true}
+      showsHorizontalScrollIndicator={false}
+      style={{height: 115, marginTop: 5}}>
+      <View style={{flexDirection: 'row', height: 70, marginTop: 10}}>
+        <TouchableOpacity>
+          <Image style={styles.storiesCardContainer} source={dp} />
+        </TouchableOpacity>
+        {list.map((e: List, i: number) => (
+          <StoriesCard e={e} i={i}/>
+        ))}
+      </View>
+    </ScrollView>
   );
 };
 
 const styles = StyleSheet.create({
-  storiesCard: {
-    borderWidth: 3,
-    borderColor: '#EA709A',
-    marginLeft: 10,
+  storiesCardContainer: {
     width: 70,
-    borderRadius: 100,
+    height: 70,
+    borderRadius: 50,
+    marginLeft: 10,
   },
 });
 

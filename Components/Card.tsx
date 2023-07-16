@@ -11,7 +11,7 @@ const Card = ({list}: any) => {
     <View>
       {list.map((currElem: List, i: number) => {
         return (
-          <View style={{marginTop: 10}} key={`${currElem.id}_${i}`}>
+          <View key={`${currElem.id}_${i}`}>
             <View style={{flexDirection: 'row', alignItems: 'center'}}>
               <Image style={styles.image} source={currElem.profileImg} />
               <Text

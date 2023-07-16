@@ -1,13 +1,15 @@
-import React, {createContext, useContext} from 'react';
-import {Image, ScrollView, StyleSheet, View} from 'react-native';
+import React, {createContext} from 'react';
+import {Image, ScrollView, StyleSheet} from 'react-native';
 import Stories from './Components/Stories';
 import Header from './Components/Header';
 import Card from './Components/Card';
-import img4 from './images/img4.jpg';
-import blur from './images/blur.jpg';
+
 import img1 from './images/img1.jpg';
 import img2 from './images/img2.jpg';
 import img3 from './images/img3.jpg';
+import img4 from './images/img4.jpg';
+import img5 from './images/img5.jpg';
+
 
 import profile1 from './images/profile1.jpg';
 import profile2 from './images/profile2.jpg';
@@ -27,7 +29,7 @@ let list = [
       desc: 'jhgUYfuyfgjgkdfjmgfkjfkjvjvjh',
       comments: 101,
       date: '24 June',
-      img: img4,
+      img: img1,
     },
   },
   {
@@ -41,7 +43,7 @@ let list = [
       desc: 'nnbcvcbacaajkjaskdjuadkha',
       comments: 312,
       date: '12 June',
-      img: blur,
+      img: img2,
     },
   },
   {
@@ -55,7 +57,7 @@ let list = [
       desc: 'nznzmnmznzbxgahkhaaa',
       comments: 812,
       date: '15 May',
-      img: img1,
+      img: img3,
     },
   },
   {
@@ -69,7 +71,7 @@ let list = [
       desc: 'lloiiyuyyrtrereretyjycvc',
       comments: 612,
       date: '7 june',
-      img: img2,
+      img: img4,
     },
   },
 
@@ -84,7 +86,7 @@ let list = [
       desc: 'jjjaxaxbhjgkjhhjvvaxax',
       comments: 312,
       date: '27 May',
-      img: img3,
+      img: img5,
     },
   },
 ];
@@ -109,7 +111,7 @@ export const UserContext = createContext<Array<List>>([]);
 function App(): JSX.Element {
   return (
     <UserContext.Provider value={list}>
-      <ScrollView style={{backgroundColor: 'white'}}>
+      <ScrollView style={{backgroundColor: 'white'}} showsVerticalScrollIndicator={false}>
         <Header />
         <Stories list={list} />
         <Card list={list} />
